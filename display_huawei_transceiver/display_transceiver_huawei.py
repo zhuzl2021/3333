@@ -17,8 +17,8 @@ def ssh_session(ip_list, output_q):
     if semaphore.acquire():
         try:
             print(threading.current_thread().getName() + " got permissions")
-            device = {"device_type":'huawei_telnet', "ip": ip_list, "username": "itc",
-                      "password": "itc@1669", }
+            device = {"device_type":'huawei_telnet', "ip": ip_list, "username": "xx",
+                      "password": "xxx", }
             net_connect = Netmiko(**device)
             # print(net_connect.find_prompt())
             others = '\n' + 'hostip ' + ip_list + '\n' + net_connect.find_prompt() + '\n'
